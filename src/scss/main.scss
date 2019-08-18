@@ -21,52 +21,54 @@ body {
 
 .glass {
   position: relative;
-}
 
-.glass__counter-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  &__counter-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.glass__counter {
-  color: #0B72B6;
-  font-size: 112px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  position: absolute;
-}
+  &__counter {
+    color: #0B72B6;
+    font-size: 112px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500; 
+    position: absolute;
+    cursor: default;
+  }
+  
+  &__button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.glass__button-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  &__button {
+    font-family: 'Roboto Mono', sans-serif;
+    cursor: pointer;
+  }
 
-.glass__button {
-  font-family: 'Roboto Mono', sans-serif;
-}
+  &__button-add {
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0,0,0, 0.25);
+    border-radius: 4px;
+    border: none;
+    font-size: 18px;
+    min-width: 216px;
+    min-height: 48px;
+    margin-top: 48px;
+    padding: 4px;
+  }
 
-.glass__button-add {
-  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
-  background-color: #fff;
-  box-shadow: 0px 4px 4px rgba(0,0,0, 0.25);
-  border-radius: 4px;
-  border: none;
-  font-size: 18px;
-  min-width: 216px;
-  min-height: 48px;
-  margin-top: 48px;
-  padding: 4px;
-}
-
-.glass__button-remove {
-  background-color: transparent;
-  border: none;
-  color: $lightgray;
-  font-size: 14px;
-  font-weight: 500;
-  min-width: 184px;
-  min-height: 23px;
-  margin-top: 37px;
+  &__button-remove {
+    background-color: transparent;
+    border: none;
+    color: $lightgray;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 184px;
+    min-height: 23px;
+    margin-top: 37px;
+  }
 }
