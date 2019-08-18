@@ -332,17 +332,23 @@ body {
 .glass {
   position: relative; }
 
+.glass__counter-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .glass__counter {
   color: #0B72B6;
   font-size: 112px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
+  position: absolute; }
 
 .glass__button-wrapper {
   display: -webkit-box;
