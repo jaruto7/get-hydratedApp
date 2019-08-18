@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500&display=swap');
 
 
 html {
@@ -11,6 +12,17 @@ html {
 }
 
 body {
-  color: $yellow;
+  align-items: center;
   background: $violet;
+  color: $yellow;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
 }
+
+
+
+
+
+
+
