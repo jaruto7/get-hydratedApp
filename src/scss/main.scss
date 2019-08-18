@@ -20,9 +20,16 @@ body {
   min-height: 100vh;
 }
 
+.glass {
+  position: relative;
+}
 
-
-
+.glass__counter {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
 
 
