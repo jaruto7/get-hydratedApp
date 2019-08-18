@@ -35,3 +35,8 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.glass__button-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
