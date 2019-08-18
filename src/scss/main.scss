@@ -23,8 +23,10 @@ body {
   position: relative;
 }
 
-.glass_picture {
-  
+.glass__counter-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .glass__counter {
@@ -32,10 +34,7 @@ body {
   font-size: 112px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  left: 50%;
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .glass__button-wrapper {
