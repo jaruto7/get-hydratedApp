@@ -21,6 +21,7 @@ body {
 
 .glass {
   position: relative;
+  padding: 16px;
 
   &__counter-wrapper {
     display: flex;
@@ -29,10 +30,11 @@ body {
   }
 
   &__counter {
-    color: #0B72B6;
+    color: $black;
     font-size: 112px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500; 
+    margin-top: 30px;
     position: absolute;
     cursor: default;
   }
