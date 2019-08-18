@@ -330,7 +330,8 @@ body {
   min-height: 100vh; }
 
 .glass {
-  position: relative; }
+  position: relative;
+  padding: 16px; }
   .glass__counter-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -342,10 +343,11 @@ body {
         -ms-flex-align: center;
             align-items: center; }
   .glass__counter {
-    color: #0B72B6;
+    color: #000;
     font-size: 112px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
+    margin-top: 30px;
     position: absolute;
     cursor: default; }
   .glass__button-wrapper {
