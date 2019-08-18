@@ -56,3 +56,12 @@ body {
   padding: 4px;
 }
 
+.glass__button-remove {
+  background-color: transparent;
+  border: none;
+  color: $lightgray;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 184px;
+  min-height: 23px;
+}
