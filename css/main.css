@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -316,7 +317,72 @@ html {
           box-sizing: inherit; }
 
 body {
-  color: #F9C802;
-  background: #000; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #0B72B6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh; }
+
+.glass {
+  position: relative; }
+
+.glass__counter {
+  color: #0B72B6;
+  font-size: 112px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+.glass__button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.glass__button {
+  font-family: 'Roboto Mono', sans-serif; }
+
+.glass__button-add {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(rgba(255, 255, 255, 0))), #FFFFFF;
+  background: -webkit-linear-gradient(top, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+  background: -o-linear-gradient(top, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  border: none;
+  font-size: 18px;
+  min-width: 216px;
+  min-height: 48px;
+  margin-top: 48px;
+  padding: 4px; }
+
+.glass__button-remove {
+  background-color: transparent;
+  border: none;
+  color: #F5E5E7;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 184px;
+  min-height: 23px;
+  margin-top: 37px; }
 
 /*# sourceMappingURL=main.css.map */

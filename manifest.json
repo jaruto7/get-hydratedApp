@@ -1,12 +1,12 @@
 {
-  "name": "WTF: PWA",
-  "short_name": "WTF: PWA",
-  "theme_color": "#000000",
-  "background_color": "#000000",
-  "display": "standalone",
+  "name": "get-hydratedApp",
+  "short_name": "get-hydrated",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "browser",
   "orientation": "portrait",
-  "scope": "/wtf-gulp-starter/",
-  "start_url": "/wtf-gulp-starter/",
+  "Scope": "/get-hydratedApp",
+  "start_url": "/get-hydratedApp",
   "icons": [
     {
       "src": "assets/pwa/icons/icon-72x72.png",
@@ -48,5 +48,6 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "splash_pages": null
 }
