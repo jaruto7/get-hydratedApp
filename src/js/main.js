@@ -23,24 +23,38 @@ const buttonRemove = document.querySelector('.glass__button-remove--js');
 let counter = 0;
 const key = new Date().toISOString().slice(0, 10);
 
-
+const setLocalStorageCounter = (e) => {
+  glassCounter.innerHTML = counter;
+  localStorage.setItem(key, counter);
+}
 
 buttonAdd.addEventListener('click', (e) => {
-  if(localStorage.getItem(key, counter)) {
-    counter++
-    glassCounter.innerHTML = counter;
-    localStorage.setItem(key, counter);
+  if(localStorage.getItem(key)) {
+    glassCounter.innerHTML = ++counter;
+    localStorage.setItem(key, counter);    
   } else {
-    counter = 0;
+    localStorage.setItem(key, 0);
   }
   
-  if(localStorage.getItem(key, counter) > 10) {
+  if(localStorage.getItem(key) > 10) {
     counter = 10;
-    glassCounter.innerHTML = counter;
-    localStorage.setItem(key, counter);
+    setLocalStorageCounter();
   }
 });
 
+buttonRemove.addEventListener('click', (e) => {
+  if(localStorage.getItem(key)) {
+    glassCounter.innerHTML = --counter;
+    localStorage.setItem(key, counter);    
+  } else {
+    localStorage.setItem(key, 0);
+  }
+  
+  if(localStorage.getItem(key) < 0) {
+    counter = 0;
+    setLocalStorageCounter();
+  }
+});
 
 
 
