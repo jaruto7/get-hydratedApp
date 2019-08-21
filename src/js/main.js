@@ -19,42 +19,45 @@ if ('serviceWorker' in navigator) {
 const glassCounter = document.querySelector('.glass__counter--js');
 const buttonAdd = document.querySelector('.glass__button-add--js');
 const buttonRemove = document.querySelector('.glass__button-remove--js');
+const buttonZeroing = document.querySelector('.glass__button-zeroing--js');
 
 let counter = 0;
 const key = new Date().toISOString().slice(0, 10);
 
-const setLocalStorageCounter = (e) => {
-  glassCounter.innerHTML = counter;
+
+if(localStorage.getItem(key)) {
+  glassCounter.innerHTML = localStorage.getItem(key);
+} else {
   localStorage.setItem(key, counter);
+  glassCounter.innerHTML = "0"; 
 }
 
 buttonAdd.addEventListener('click', (e) => {
-  if(localStorage.getItem(key)) {
-    glassCounter.innerHTML = ++counter;
-    localStorage.setItem(key, counter);    
-  } else {
-    localStorage.setItem(key, 0);
+  if(parseInt(localStorage.getItem(key)) >= 10) {
+    localStorage.setItem(key, parseInt(localStorage.getItem(key)) - 1);
   }
   
-  if(localStorage.getItem(key) > 10) {
-    counter = 10;
-    setLocalStorageCounter();
-  }
+  localStorage.setItem(key, parseInt(localStorage.getItem(key)) + 1);
+  glassCounter.innerHTML = localStorage.getItem(key);
 });
 
 buttonRemove.addEventListener('click', (e) => {
-  if(localStorage.getItem(key)) {
-    glassCounter.innerHTML = --counter;
-    localStorage.setItem(key, counter);    
-  } else {
-    localStorage.setItem(key, 0);
+  if(parseInt(localStorage.getItem(key)) <= 0) {
+    localStorage.setItem(key, parseInt(localStorage.getItem(key)) + 1);
   }
   
-  if(localStorage.getItem(key) < 0) {
-    counter = 0;
-    setLocalStorageCounter();
-  }
+  localStorage.setItem(key, parseInt(localStorage.getItem(key)) - 1);
+  glassCounter.innerHTML = localStorage.getItem(key);
 });
+
+buttonZeroing.addEventListener('click', (e) => {
+  glassCounter.value = localStorage.setItem(key, counter);
+  glassCounter.innerHTML = "0";
+})
+
+
+
+
 
 
 
